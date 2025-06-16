@@ -2,8 +2,69 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Atefor Lesley – MSc CS | Machine Learning | Python | Web Dev Portfolio"
+    />
+    <meta property="og:title" content="Atefor Lesley – Portfolio" />
+    <meta
+      property="og:description"
+      content="Explore Atefor Lesley's portfolio featuring projects in Machine Learning, Web Development, and Python."
+    />
+    <meta
+      property="og:image"
+      content="https://YOUR_NETLIFY_SITE_URL/assets/preview.png"
+    />
+    <meta property="og:url" content="https://YOUR_NETLIFY_SITE_URL" />
     <title>Atefor Lesley – Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+      form {
+        max-width: 500px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      input,
+      textarea {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+        background-color: rgb(236, 221, 221);
+      }
+      button {
+        padding: 10px;
+        background-color: #01a3b9;
+        color: rgb(236, 221, 221);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0097a7;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 1.8em;
+        }
+        nav {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+        .project-card {
+          padding: 15px;
+        }
+        form {
+          padding: 0 10px;
+        }
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -75,7 +136,17 @@
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>Email: atefor@example.com</p>
+      <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          rows="5"
+          required
+        ></textarea>
+        <button type="submit">Send Message</button>
+      </form>
       <p>
         <a href="https://www.fiverr.com/sellers/lesley237" target="_blank"
           >My Fiverr</a
